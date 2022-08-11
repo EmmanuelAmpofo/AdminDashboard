@@ -13,12 +13,15 @@ import { mainMenuData } from "./MenuData";
 import logo from "../../assets/color.svg"
 import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const sideBarWidth = 250;
 const useStyles = makeStyles((theme) => ({
+    sidebarRoot: {
+        display: 'flex'
+    },
   drawer: {
     width: sideBarWidth,
-    cursor: "pointer",
   },
   paper: {
     width: sideBarWidth,
@@ -29,6 +32,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginTop: 10,
     marginBottom: 30,
+    cursor: "pointer",
+  },
+  listItem: {
+    cursor: 'pointer',
+    // background: "gray",
+    "&:hover": {
+        background: theme.palette.global.shadeGray,
+    }
   },
   menuIcon: {
     minWidth: "35px",
@@ -43,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid gray",
     borderRadius: 50,
     margin: "0 10px",
+    cursor: "pointer",
   },
   light: {
     display: "flex",
@@ -67,6 +79,9 @@ const useStyles = makeStyles((theme) => ({
 
 function SideBar() {
   const classes = useStyles();
+//   const location = useLocation()
+  const navigate = useNavigate()
+
   return (
     <div className={classes.sidebarRoot}>
       <Drawer
@@ -81,7 +96,9 @@ function SideBar() {
         <hr/>
         <List>
           {mainMenuData.map((menuItem) => (
-            <ListItem key={menuItem.text}>
+            <ListItem key={menuItem.text} className={classes.listItem} onClick={()=>{
+                navigate(menuItem.path)
+            }} >
               <ListItemIcon className={classes.menuIcon}>
                 <Typography>{menuItem.icon}</Typography>
               </ListItemIcon>

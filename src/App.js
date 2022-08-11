@@ -1,12 +1,21 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import { ThemeProvider } from "@material-ui/core";
 import Theme from "./themimg/Theme";
-import SideBar from "./components/sidebar/SideBar";
+import MainLayout from "./mainLayout/MainLayout";
+import {routes} from "./utils/routes/AppRoutes";
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
-      <SideBar/>
+      <Router>
+        <MainLayout>
+          <Routes>
+            {routes.map(({path, element}, key)=>
+              <Route exact path={path} element={element} key={key}/>
+            )}
+          </Routes>
+        </MainLayout>
+      </Router>
     </ThemeProvider>  
   
   );

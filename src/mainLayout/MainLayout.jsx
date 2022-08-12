@@ -3,9 +3,19 @@ import SideBar from '../components/sidebar/SideBar'
 import { makeStyles } from '@material-ui/styles'
 import TopBar from '../components/topbar/TopBar'
 
-const useStyles = makeStyles((theme)=>{
-    
-})
+const sideBarWidth = 250
+
+const useStyles = makeStyles((theme)=>({
+  mainLayout:{
+    display: 'flex'
+  },
+  childWrap: {
+    width: `calc(100% - ${sideBarWidth}px)`
+  },
+    toolbarHeight: {
+      ...theme.mixins.toolbar
+    }
+}));
 
 function MainLayout({children}) {
     const classes = useStyles()
@@ -13,7 +23,8 @@ function MainLayout({children}) {
     <div className={classes.mainLayout}>
         <SideBar/>
         <TopBar/>
-        <div>
+        <div className={classes.childWrap}>
+          <div className={classes.toolbarHeight}></div>
             {children}
         </div>
     </div>

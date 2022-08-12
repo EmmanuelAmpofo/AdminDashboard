@@ -1,8 +1,11 @@
 import React from 'react'
+import CardHeader from '../../utils/reusables/maincard/CardHeader'
 
 function Dasboard() {
   return (
-    <div>jasfgbslhdgjgkbfhvdvf,bvkhgdfbvhuyldfhivbgrgfgfhfleroighg87egligriygerlyivgburyg</div>
+    <div>
+      <CardHeader/>
+    </div>
   )
 }
 

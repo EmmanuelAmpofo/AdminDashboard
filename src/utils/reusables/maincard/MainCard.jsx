@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Card() {
+function MainCard() {
   return (
     <div>Card here</div>
   )
 }
 
-export default Card
+export default MainCard

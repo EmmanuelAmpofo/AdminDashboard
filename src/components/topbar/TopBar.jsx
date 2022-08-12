@@ -1,4 +1,4 @@
-import { AppBar, Badge, Box, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Badge, Box, Toolbar} from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { SearchRounded, NotificationsNoneRounded } from "@material-ui/icons";
@@ -38,10 +38,12 @@ const useStyles = makeStyles((theme) => ({
   logoImage: {
     height: '40px',
     width: "40px",
-    borderRadius: '50%'
+    borderRadius: '50%',
+    cursor: 'pointer'
   },
   badge: {
-    marginRight: '25px'
+    marginRight: '25px',
+    cursor: 'pointer'
   }
 }));
 

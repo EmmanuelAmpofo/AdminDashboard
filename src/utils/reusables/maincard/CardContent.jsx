@@ -1,8 +1,11 @@
+import { Box } from '@material-ui/core'
 import React from 'react'
 
-function CardContent() {
+function CardContent({children}) {
   return (
-    <div>CardContent</div>
+    <Box>
+      {children}
+    </Box>
   )
 }
 

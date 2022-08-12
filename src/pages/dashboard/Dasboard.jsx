@@ -1,10 +1,11 @@
 import React from 'react'
-import CardHeader from '../../utils/reusables/maincard/CardHeader'
+import CardContent from '../../utils/reusables/maincard/CardContent'
+
 
 function Dasboard() {
   return (
     <div>
-      <CardHeader/>
+      <CardContent/>
     </div>
   )
 }

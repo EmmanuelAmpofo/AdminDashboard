@@ -1,8 +1,20 @@
 import React from 'react'
+import { Box, makeStyles } from '@material-ui/core'
+const useStyles = makeStyles((theme)=>({
+  cardfooter:{
+    display: "flex",
+    justifyContent: "space-between"
+  }
+}))
+
 
 function CardFooter() {
+  const classes = useStyles()
   return (
-    <div>CardFooter</div>
+    <Box className={classes.cardfooter}>
+      <Box className={classes.footerLink}>Footer link</Box>
+      <Box>Footer icon</Box>
+    </Box>
   )
 }
 

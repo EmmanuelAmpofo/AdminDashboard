@@ -1,8 +1,17 @@
+import { Box } from '@material-ui/core'
 import React from 'react'
+import { makeStyles } from '@material-ui/core'
 
-function CardContent() {
+const useStyles = makeStyles((theme)=>({
+
+}))
+
+function CardContent({children}) {
+  const classes =  useStyles()
   return (
-    <div>CardContent</div>
+    <Box className={classes.cardChildrenWrapper}>
+      {children}
+    </Box>
   )
 }
 

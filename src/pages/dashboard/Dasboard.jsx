@@ -1,10 +1,16 @@
 import React from 'react'
-import CardHeader from '../../utils/reusables/maincard/CardHeader'
+import CardFooter from '../../utils/reusables/maincard/CardFooter'
+import { makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles((theme)=>({}))
+
 
 function Dasboard() {
+
+  const classes = useStyles()
   return (
     <div>
-      <CardHeader/>
+      <CardFooter/>
     </div>
   )
 }

@@ -13,7 +13,7 @@ function CardFooter() {
   return (
     <Box className={classes.cardfooter}>
       <Box className={classes.footerLink}>Footer link</Box>
-      <Box>Footer icon</Box>
+      <Box className={classes.footericon}>Footer icon</Box>
     </Box>
   )
 }

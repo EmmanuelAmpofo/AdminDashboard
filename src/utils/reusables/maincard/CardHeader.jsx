@@ -24,12 +24,12 @@ function CardHeader({ title, icon, percent }) {
   return (
     <Box className={classes.head}>
       <Box className={classes.headtitle}>
-        <Typography>{title}</Typography>
+        <Typography>title</Typography>
       </Box>
       <Box className={classes.headiconpercent}>
-        <Box className={classes.headicon}>{icon}</Box>
+        <Box className={classes.headicon}>icon</Box>
         <Box className={classes.headpercent}>
-          <Typography>{percent}</Typography>
+          <Typography>percent</Typography>
         </Box>
       </Box>
     </Box>

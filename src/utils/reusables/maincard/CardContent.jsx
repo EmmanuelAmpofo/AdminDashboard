@@ -10,7 +10,7 @@ function CardContent({children}) {
   const classes =  useStyles()
   return (
     <Box className={classes.cardChildrenWrapper}>
-      {children}
+      children
     </Box>
   )
 }

@@ -8,7 +8,7 @@ import CardFooter from './CardFooter'
  const useStyles = makeStyles((theme)=>({
   mainCard: {
     padding: "0.9375rem"
-  }
+  },
  }))
 
 function MainCard({icon,percent, title, children, footerlink, footericon}) {
@@ -16,7 +16,7 @@ function MainCard({icon,percent, title, children, footerlink, footericon}) {
   const classes = useStyles()
   return (
     <Card className={classes.mainCard}>
-        <CardHeader icon={icon} title={title} percent={percent}/>
+        <CardHeader icon={icon} title={title} percent={percent} className={classes.userHead}/>
         <CardContent children={children}/>
         <CardFooter footerlink={footerlink} footericon={footericon}/>
     </Card>

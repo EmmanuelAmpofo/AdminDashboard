@@ -12,7 +12,7 @@ function Dasboard() {
 
   const classes = useStyles()
   return (
-    <div>
+    <div className={classes.toplayout}>
       <Grid container spacing={2}>
         <Grid item xs={3}>
           <Users/>

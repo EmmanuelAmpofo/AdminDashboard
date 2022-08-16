@@ -3,7 +3,12 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme)=>({
-
+  cardChildrenWrapper:{
+    fontSize: 30,
+    margin: "20px  0",
+    color: theme.palette.global.black,
+    fontWeight: 600
+  }
 }))
 
 function CardContent({children}) {

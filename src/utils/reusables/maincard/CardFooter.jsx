@@ -5,6 +5,20 @@ const useStyles = makeStyles((theme)=>({
   cardfooter:{
     display: "flex",
     justifyContent: "space-between"
+  },
+  footericon: {
+    color: 'crimson',
+    background: 'rgba(255, 0, 0, 0.2)',
+    borderRadius: "50%",
+    padding: "5px",
+    fontSize: "5px"
+  },
+  footerLink:{
+    color: theme.palette.global.black,
+    textDecoration: 'underline',
+    "&:hover":{
+      cursor: "pointer",
+    }
   }
 }))
 
@@ -14,7 +28,7 @@ function CardFooter({footerlink, footericon}) {
   return (
     <Box className={classes.cardfooter}>
       <Box className={classes.footerLink}>
-        <Link href="https://google.com" target="_blank" >{footerlink}</Link> 
+        {footerlink}
       </Box>
       <Box className={classes.footericon}>{footericon}</Box>
     </Box>

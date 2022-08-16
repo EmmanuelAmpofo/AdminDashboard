@@ -15,7 +15,7 @@ import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const sideBarWidth = 250;
+const sideBarWidth = "15.625rem";
 const useStyles = makeStyles((theme) => ({
     sidebarRoot: {
         display: 'flex'

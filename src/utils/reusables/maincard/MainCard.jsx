@@ -17,8 +17,8 @@ function MainCard({icon,percent, title, children, footerlink, footericon}) {
   return (
     <Card className={classes.mainCard}>
         <CardHeader icon={icon} title={title} percent={percent} className={classes.userHead}/>
-        <CardContent children={children}/>
-        <CardFooter footerlink={footerlink} footericon={footericon}/>
+        <CardContent children={children} title={title}/>
+        <CardFooter footerlink={footerlink} footericon={footericon} title={title}/>
     </Card>
   )
 }

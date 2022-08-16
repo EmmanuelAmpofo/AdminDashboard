@@ -20,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     border: `1px solid gray`,
-    borderRadius: "5px",
-    padding: "5px 10px",
+    borderRadius: "0.3125rem",
+    padding: "0.3125rem 0.625rem",
   },
   searchinput: {
     border: "none",
@@ -36,13 +36,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   logoImage: {
-    height: '40px',
-    width: "40px",
+    height: '2.5rem',
+    width: "2.5rem",
     borderRadius: '50%',
     cursor: 'pointer'
   },
   badge: {
-    marginRight: '25px',
+    marginRight: '1.5625rem',
     cursor: 'pointer'
   }
 }));

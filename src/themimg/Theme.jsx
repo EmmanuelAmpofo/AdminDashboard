@@ -6,7 +6,7 @@ const black= "#303030"
 const green = "#42b546"
 const shadeGray = "#80808017"
 const grayLight = "#aeaeae"
-const dashboardBackground = "#e4f0fc"
+const dashboardBackground = "#e4f0fc5c"
 
 export default createTheme({
     palette: {

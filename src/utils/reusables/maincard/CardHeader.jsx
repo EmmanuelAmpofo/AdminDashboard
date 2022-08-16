@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingBottom: '3px'
+    paddingBottom: '0.1875rem'
   },
   headiconpercent: {
     display: "flex",
@@ -21,8 +21,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
   },
   headtitle:{
-    fontSize: "20px",
-    color: theme.palette.global.grayLight
+    fontSize: "1.25rem",
+    color: theme.palette.global.grayLight,
+    textTransform: "Uppercase"
   },
  
 }));

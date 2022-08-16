@@ -1,38 +1,63 @@
-import React from 'react'
-import { Box, makeStyles } from '@material-ui/core'
-import { Link } from '@material-ui/core'
-const useStyles = makeStyles((theme)=>({
-  cardfooter:{
+import React from "react";
+import { Box, makeStyles } from "@material-ui/core";
+const useStyles = makeStyles((theme) => ({
+  cardfooter: {
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    alignItems:"center"
   },
   footericon: {
-    color: 'crimson',
-    background: 'rgba(255, 0, 0, 0.2)',
-    borderRadius: "50%",
-    padding: "5px",
-    fontSize: "5px"
+    color: "crimson",
+    background: "rgba(255, 0, 0, 0.2)",
+    borderRadius: "15%",
+    padding: "0.3125rem",
+    fontSize: "0.3125rem",
   },
-  footerLink:{
+  orders: {
+    color: "goldenrod",
+    background: "rgba(218, 165, 32, 0.2)",
+    borderRadius: "15%",
+    padding: "0.3125rem",
+    fontSize: "0.3125rem",
+  },
+  earnings: {
+    color: "green",
+    background: "rgba(0, 128, 0, 0.2)",
+    borderRadius: "15%",
+    padding: "0.3125rem",
+    fontSize: "0.3125rem",
+  },
+  balance: {
+    color: "purple",
+    background: "rgba(128, 0, 128, 0.2)",
+    borderRadius: "15%",
+    padding: "0.3125rem",
+    fontSize: "0.3125rem",
+  },
+  footerLink: {
     color: theme.palette.global.black,
-    textDecoration: 'underline',
-    "&:hover":{
+    textDecoration: "underline",
+    "&:hover": {
       cursor: "pointer",
-    }
-  }
-}))
+    },
+  },
+}));
 
-
-function CardFooter({footerlink, footericon}) {
-  const classes = useStyles()
+function CardFooter({ footerlink, footericon, title }) {
+  const classes = useStyles();
   return (
     <Box className={classes.cardfooter}>
-      <Box className={classes.footerLink}>
-        {footerlink}
+      <Box className={classes.footerLink}>{footerlink}</Box>
+      <Box
+        className={`
+      ${title === "Orders" ? `${classes.orders}` : 
+      title === "Earnings" ? `${classes.earnings}`:
+      title === "Balance" ? `${classes.balance}`: `${classes.footericon}`}`}
+      >
+        {footericon}
       </Box>
-      <Box className={classes.footericon}>{footericon}</Box>
     </Box>
-  )
+  );
 }
 
-export default CardFooter
+export default CardFooter;

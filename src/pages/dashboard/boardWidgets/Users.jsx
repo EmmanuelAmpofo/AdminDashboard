@@ -1,6 +1,6 @@
 import React from "react";
 import MainCard from "../../../utils/reusables/maincard/MainCard";
-import { KeyboardArrowUpRounded, PersonRounded } from "@material-ui/icons";
+import { KeyboardArrowUpRounded, PersonOutlineOutlined } from "@material-ui/icons";
 
 function Users() {
   return (
@@ -11,7 +11,7 @@ function Users() {
         percent="20%"
         children={85}
         footerlink="See all users"
-        footericon={<PersonRounded/>}
+        footericon={<PersonOutlineOutlined/>}
       />
     </div>
   );

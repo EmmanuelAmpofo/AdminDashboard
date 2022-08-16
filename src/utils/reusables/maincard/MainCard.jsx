@@ -1,8 +1,25 @@
+import { Card } from '@material-ui/core'
+import CardHeader from "../../reusables/maincard/CardHeader"
 import React from 'react'
+import CardContent from './CardContent'
+import CardFooter from './CardFooter'
+ import {makeStyles} from '@material-ui/core'
 
-function MainCard() {
+ const useStyles = makeStyles((theme)=>({
+  mainCard: {
+    padding: "0.9375rem"
+  },
+ }))
+
+function MainCard({icon,percent, title, children, footerlink, footericon}) {
+
+  const classes = useStyles()
   return (
-    <div>Card here</div>
+    <Card className={classes.mainCard}>
+        <CardHeader icon={icon} title={title} percent={percent} className={classes.userHead}/>
+        <CardContent children={children}/>
+        <CardFooter footerlink={footerlink} footericon={footericon}/>
+    </Card>
   )
 }
 

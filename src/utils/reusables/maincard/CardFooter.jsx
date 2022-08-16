@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, makeStyles } from '@material-ui/core'
+import { Link } from '@material-ui/core'
 const useStyles = makeStyles((theme)=>({
   cardfooter:{
     display: "flex",
@@ -8,12 +9,14 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 
-function CardFooter() {
+function CardFooter({footerlink, footericon}) {
   const classes = useStyles()
   return (
     <Box className={classes.cardfooter}>
-      <Box className={classes.footerLink}>Footer link</Box>
-      <Box className={classes.footericon}>Footer icon</Box>
+      <Box className={classes.footerLink}>
+        <Link href="https://google.com" target="_blank" >{footerlink}</Link> 
+      </Box>
+      <Box className={classes.footericon}>{footericon}</Box>
     </Box>
   )
 }

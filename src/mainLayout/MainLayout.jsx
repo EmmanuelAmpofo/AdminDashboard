@@ -10,7 +10,9 @@ const useStyles = makeStyles((theme)=>({
     display: 'flex'
   },
   childWrap: {
-    width: `calc(100% - ${sideBarWidth}px)`
+    width: `calc(100% - ${sideBarWidth}px)`,
+    background: theme.palette.global.dashboardBackground,
+    padding: "1.875rem"
   },
     toolbarHeight: {
       ...theme.mixins.toolbar

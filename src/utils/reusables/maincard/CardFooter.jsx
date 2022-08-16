@@ -52,7 +52,8 @@ function CardFooter({ footerlink, footericon, title }) {
         className={`
       ${title === "Orders" ? `${classes.orders}` : 
       title === "Earnings" ? `${classes.earnings}`:
-      title === "Balance" ? `${classes.balance}`: `${classes.footericon}`}`}
+      title === "Balance" ? `${classes.balance}`: 
+      title === "Users" ? `${classes.footericon}` : null }`}
       >
         {footericon}
       </Box>

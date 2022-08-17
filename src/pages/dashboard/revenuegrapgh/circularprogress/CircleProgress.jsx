@@ -3,6 +3,7 @@ import React from 'react'
 import {CircularProgressbar} from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css"
 import {makeStyles} from '@material-ui/core';
+import { KeyboardArrowDown, KeyboardArrowUp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme)=>({
   progress: {
@@ -22,9 +23,36 @@ const useStyles = makeStyles((theme)=>({
     marginTop: "15px"
   },
   text:{
-    fontSize: "16px",
+    fontSize: "14px",
     color: theme.palette.global.grayLight,
     textAlign: "center"
+  },
+  summary:{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingTop: "15px"
+  },
+  summ:{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent :"center",
+    alignItems: "center"
+  },
+  summaryheader: {
+    color: theme.palette.global.grayLight,
+    fontSize: "16px"
+  },
+  summarybody:{
+    display: "flex",
+    fontSize: "16px",
+    paddingTop: "10px"
+  },
+  targetred: {
+    color: theme.palette.global.red
+  },
+  targetgreen: {
+    color: theme.palette.global.green
   }
 }))
 
@@ -41,6 +69,30 @@ function CircleProgress() {
           <Box className={classes.totalsale}>Total sales made today</Box>
           <Box className={classes.amt}>$416</Box>
           <Box className={classes.text}>Previous transactions processing. Last payments may not be included.</Box>
+        </Box>
+        <Box className={classes.summary}>
+          <Box className={classes.summ}>
+            <Box className={classes.summaryheader}>Target</Box>
+            <Box className={`${classes.summarybody} ${classes.targetred}`}>
+            <Box><KeyboardArrowDown/></Box>
+            <Box>$12.4k</Box>
+            </Box>
+          </Box>
+          <Box className={classes.summ}>
+            <Box className={classes.summaryheader}>Last Week</Box>
+            <Box className={`${classes.summarybody} ${classes.targetgreen}`}>
+            <Box><KeyboardArrowUp/></Box>
+            <Box className={classes.target}>$12.4k</Box>
+            </Box>
+          </Box>
+          <Box className={classes.summ}>
+            <Box className={classes.summaryheader}>Last Month</Box>
+            <Box className={`${classes.summarybody} ${classes.targetgreen}`}>
+            <Box><KeyboardArrowUp/></Box>
+            <Box className={classes.target}>$12.4k</Box>
+            </Box>
+          </Box>
+          
         </Box>
     </div>
   )

@@ -6,9 +6,19 @@ import {makeStyles} from '@material-ui/core';
 import { KeyboardArrowDown, KeyboardArrowUp } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme)=>({
+  circ:{
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+
+  },
   progress: {
     width: "100px",
-    height: "100px"
+    height: "100px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
   },
   totalsalewrapper: {
     display: "flex",
@@ -62,9 +72,11 @@ function CircleProgress() {
   const percentage = 85;
   return (
     <div className={classes.totalwrapper}>
+      <Box className={classes.circ}>
       <CircularProgressbar className={classes.progress} value={percentage}
         text={`${percentage}%`}
         strokeWidth={5}/>
+      </Box>
         <Box className={classes.totalsalewrapper}>
           <Box className={classes.totalsale}>Total sales made today</Box>
           <Box className={classes.amt}>$416</Box>

@@ -6,8 +6,14 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ResponsiveContainer,
 } from "recharts";
+import { makeStyles } from "@material-ui/core";
+const useStyles = makeStyles((theme)=>({
+  chart:{
+    fontSize: "15px"
+  }
+}))
+
 const data = [
   {
     name: "Page A",
@@ -54,8 +60,9 @@ const data = [
 ];
 
 function Chart() {
+  const classes = useStyles()
   return (
-    <>
+    <div className={classes.chart}>
       <AreaChart
         width={730}
         height={250}
@@ -91,7 +98,7 @@ function Chart() {
           fill="url(#colorPv)"
         />
       </AreaChart>
-    </>
+    </div>
   );
 }
 

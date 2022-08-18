@@ -1,11 +1,11 @@
 import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
-import Users from "./boardWidgets/Users";
-import Orders from "./boardWidgets/Orders";
-import Earning from "./boardWidgets/Earning";
-import Balance from "./boardWidgets/Balance";
-import TotalRevenue from "./revenuegrapgh/TotalRevenue";
-import Graph from "./revenuegrapgh/Graph";
+import Users from "../../components/boardWidgets/Users"
+import Orders from "../../components/boardWidgets/Orders"
+import Balance from "../../components/boardWidgets/Balance"
+import Earning from "../../components/boardWidgets/Earning"
+import TotalRevenue from "../../components/revenuegrapgh/TotalRevenue";
+import Graph from "../../components/revenuegrapgh/Graph";
 
 const useStyles = makeStyles((theme) => ({
   uppersection:{

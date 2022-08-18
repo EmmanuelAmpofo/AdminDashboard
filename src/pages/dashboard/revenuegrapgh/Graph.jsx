@@ -5,7 +5,7 @@ import Chart from './chart/Chart'
 function Graph() {
   return (
     <div>
-        <MainCard title="Last 5 Months" children={<Chart/>}/>
+        <MainCard title="Last 6 Months" children={<Chart/>}/>
     </div>
   )
 }

@@ -1,15 +1,19 @@
 import React from "react";
 import { Grid, makeStyles } from "@material-ui/core";
-import Users from "./boardWidgets/Users";
-import Orders from "./boardWidgets/Orders";
-import Earning from "./boardWidgets/Earning";
-import Balance from "./boardWidgets/Balance";
-import TotalRevenue from "./revenuegrapgh/TotalRevenue";
-import Graph from "./revenuegrapgh/Graph";
+import Users from "../../components/boardWidgets/Users"
+import Orders from "../../components/boardWidgets/Orders"
+import Balance from "../../components/boardWidgets/Balance"
+import Earning from "../../components/boardWidgets/Earning"
+import TotalRevenue from "../../components/revenuegrapgh/TotalRevenue";
+import Graph from "../../components/revenuegrapgh/Graph";
+import DashboardTable from "../../components/dashboardtable/DashboardTable";
 
 const useStyles = makeStyles((theme) => ({
   uppersection:{
-    marginBottom: "1.875rem"
+    marginBottom: "1.575rem"
+  },
+  middlesection: {
+    marginBottom: "1.575rem"
   }
 }));
 
@@ -31,12 +35,17 @@ function Dasboard() {
           <Balance />
         </Grid>
       </Grid>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} className={classes.middlesection}>
         <Grid item xs={4}>
           <TotalRevenue />
         </Grid>
         <Grid item xs={8}>
           <Graph />
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+          <DashboardTable/>
         </Grid>
       </Grid>
     </div>

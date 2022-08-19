@@ -1,5 +1,5 @@
 import React from 'react'
-import MainCard from '../../../utils/reusables/maincard/MainCard'
+import MainCard from '../../utils/reusables/maincard/MainCard';
 import { KeyboardArrowUpRounded, ShoppingCartOutlined } from "@material-ui/icons";
 
 function Orders() {

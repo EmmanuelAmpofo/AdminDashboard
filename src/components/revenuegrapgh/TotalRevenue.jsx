@@ -1,6 +1,6 @@
 
 import React from 'react'
-import MainCard from '../../../utils/reusables/maincard/MainCard'
+import MainCard from '../../utils/reusables/maincard/MainCard'
 import { MoreVertOutlined } from '@material-ui/icons'
 import CircleProgress from './circularprogress/CircleProgress'
 

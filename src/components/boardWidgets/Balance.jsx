@@ -1,5 +1,5 @@
 import React from 'react'
-import MainCard from '../../../utils/reusables/maincard/MainCard'
+import MainCard from '../../utils/reusables/maincard/MainCard'
 import { KeyboardArrowUpRounded, AccountBalanceWalletOutlined } from "@material-ui/icons";
 
 function Balance() {

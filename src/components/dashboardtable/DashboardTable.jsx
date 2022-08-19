@@ -4,7 +4,7 @@ import MainCard from '../../utils/reusables/maincard/MainCard'
 function DashboardTable() {
   return (
     <div>
-      <MainCard/>
+      <MainCard title="Customers"/>
     </div>
   )
 }

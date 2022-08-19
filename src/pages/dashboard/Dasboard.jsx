@@ -10,10 +10,10 @@ import DashboardTable from "../../components/dashboardtable/DashboardTable";
 
 const useStyles = makeStyles((theme) => ({
   uppersection:{
-    marginBottom: "1.575rem"
+    marginBottom: "1rem"
   },
   middlesection: {
-    marginBottom: "1.575rem"
+    marginBottom: "1rem"
   }
 }));
 

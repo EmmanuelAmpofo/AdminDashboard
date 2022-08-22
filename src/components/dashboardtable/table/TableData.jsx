@@ -41,8 +41,8 @@ const tableListData = [
     },
     {
         id: 35266,
-        product: "Acer Nitro 5",
-        img: "https://m.media-amazon.com/images/I/61dcxWBw+HL._AC_SX679_.jpg",
+        product: "ASUS ROG Zephyru",
+        img: "https://m.media-amazon.com/images/I/71FLQPJc9WL._AC_SX679_.jpg",
         customer: "Harold Carol",
         date: "1 March",
         amount: 1050,

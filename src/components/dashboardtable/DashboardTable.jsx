@@ -1,10 +1,11 @@
 import React from 'react'
 import MainCard from '../../utils/reusables/maincard/MainCard'
+import TableList from './table/TableList'
 
 function DashboardTable() {
   return (
     <div>
-      <MainCard title="Customers"/>
+      <MainCard title="Customers" children={<TableList/>}/>
     </div>
   )
 }

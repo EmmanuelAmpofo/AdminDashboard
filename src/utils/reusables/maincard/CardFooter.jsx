@@ -7,14 +7,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems:"center"
   },
   footericon: {
-    color: "crimson",
+    color: theme.palette.global.red,
     background: "rgba(255, 0, 0, 0.2)",
     borderRadius: "15%",
     padding: "0.3125rem",
     fontSize: "0.3125rem",
   },
   orders: {
-    color: "goldenrod",
+    color: theme.palette.global.goldenrod,
     background: "rgba(218, 165, 32, 0.2)",
     borderRadius: "15%",
     padding: "0.3125rem",

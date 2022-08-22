@@ -1,34 +1,45 @@
-import React from 'react'
-import tableListData from './TableData'
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import { makeStyles } from '@material-ui/core';
+import React from "react";
+import tableListData from "./TableData";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles((theme)=>({
+const useStyles = makeStyles((theme) => ({
   table: {
     minWidth: 650,
   },
-  productwrap:{
+  productwrap: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   image: {
     height: "32px",
     width: "32px",
     borderRadius: "50%",
     objectFit: "cover",
-    marginRight: "10px"
-  }
-}))
-
+    marginRight: "10px",
+  },
+  approved: {
+    padding: "5px",
+    borderRadius: "5px",
+    color: theme.palette.global.green,
+    backgroundColor: theme.palette.global.approvedBackground,
+  },
+  pending: {
+    padding: "5px",
+    borderRadius: "5px",
+    color: theme.palette.global.goldenrod,
+    backgroundColor: theme.palette.global.pendingBackground,
+  },
+}));
 
 function TableList() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
@@ -52,19 +63,28 @@ function TableList() {
                   <img src={tabledata.img} alt="" className={classes.image} />
                   {tabledata.product}
                 </div>
-                
               </TableCell>
               <TableCell>{tabledata.customer}</TableCell>
               <TableCell>{tabledata.date}</TableCell>
               <TableCell>{tabledata.amount}</TableCell>
               <TableCell>{tabledata.method}</TableCell>
-              <TableCell>{tabledata.status}</TableCell>
+              <TableCell>
+                <span
+                  className={
+                    tabledata.status === "Approved"
+                      ? classes.approved
+                      : classes.pending
+                  }
+                >
+                  {tabledata.status}
+                </span>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
-  )
+  );
 }
 
-export default TableList
+export default TableList;

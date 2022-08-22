@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 function CardContent({children, title}) {
-  console.log(title)
   const classes =  useStyles()
   return (
     <Box className={classes.cardChildrenWrapper}>

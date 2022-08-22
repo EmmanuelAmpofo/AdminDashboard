@@ -60,7 +60,7 @@ function TableList() {
               <TableCell>{tabledata.id}</TableCell>
               <TableCell>
                 <div className={classes.productwrap}>
-                  <img src={tabledata.img} alt="" className={classes.image} />
+                  <img src={tabledata.img} alt="product" className={classes.image} />
                   {tabledata.product}
                 </div>
               </TableCell>

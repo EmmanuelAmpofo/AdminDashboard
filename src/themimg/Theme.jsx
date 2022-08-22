@@ -5,6 +5,7 @@ const blue = "#85A2B7"
 const black= "#303030"
 const green = "#42b546"
 const red = "crimson"
+const darkblue = "darkblue"
 const goldenrod = "goldenrod"
 const shadeGray = "#80808017"
 const grayLight = "#aeaeae"
@@ -20,6 +21,7 @@ export default createTheme({
             blue: `${blue}`,
             green: `${green}`,
             red: `${red}`,
+            darkblue: `${darkblue}`,
             goldenrod: `${goldenrod}`,
             shadeGray: `${shadeGray}`,
             dashboardBackground: `${dashboardBackground}`,

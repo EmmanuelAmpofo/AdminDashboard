@@ -3,8 +3,9 @@ import Dashboard from "../../pages/dashboard/Dasboard"
 import Delivery from "../../pages/delivery/Delivery"
 import Users from "../../pages/users/Users"
 import Orders from "../../pages/orders/Orders"
-// import SignUp from "../../pages/signup/SignUp"
-// import Login from "../../pages/login/Login"
+import SingleUser from "../../pages/singleuser/SingleUser"
+import New from "../../pages/new/New"
+
 
 export const routes = [
     {
@@ -13,7 +14,17 @@ export const routes = [
     },
     {
         path: '/users',
-        element: <Users/>
+        element: <Users/>,
+        nested: [
+            {
+                path: ':userId',
+                element: <SingleUser/>
+            },
+            {
+                path: '/new',
+                element: <New/>
+            }
+        ]
     },
     {
         path: '/products',
@@ -26,15 +37,7 @@ export const routes = [
     {
         path: '/delivery',
         element: <Delivery/>
-    },
-    // {
-    //     path: '/',
-    //     element: <Dashboard/>
-    // },
-    // {
-    //     path: '/',
-    //     element: <Dashboard/>
-    // },
+    }
 
 ]
 

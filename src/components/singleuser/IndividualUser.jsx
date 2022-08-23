@@ -5,7 +5,7 @@ import UserContactCard from './usercontact/UserContactCard'
 function IndividualUser() {
   return (
     <div>
-      <MainCard children={<UserContactCard/>}/>
+      <MainCard title="information" percent="edit" children={<UserContactCard/>}/>
     </div>
   )
 }

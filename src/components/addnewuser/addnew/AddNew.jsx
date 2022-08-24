@@ -32,14 +32,6 @@ const useStyles = makeStyles((theme) => ({
   },
   imgSpan: {
     fontSize: "14px",
-  },
-  textfieldXXX: {
-    borderBottom: "none !important",
-    "& input::after":{
-        borderBottom: "none !important",
-
-    }
-   
   }
 }));
 

@@ -5,7 +5,7 @@ import Chart from './chart/Chart'
 function Graph({aspect,title, className}) {
   return (
     <div>
-        <MainCard title="Last 6 Months" children={<Chart title="user"/>}/>
+        <MainCard title={title} children={<Chart aspect={aspect} />} aspect={aspect} />
     </div>
   )
 }

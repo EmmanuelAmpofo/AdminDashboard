@@ -40,12 +40,12 @@ function Dasboard() {
           <TotalRevenue />
         </Grid>
         <Grid item xs={8}>
-          <Graph />
+          <Graph title="Last 6 Months (Revenue)" aspect={2.4 / 1}/>
         </Grid>
       </Grid>
       <Grid container>
         <Grid item xs={12}>
-          <DashboardTable/>
+          <DashboardTable title="Customers"/>
         </Grid>
       </Grid>
     </div>

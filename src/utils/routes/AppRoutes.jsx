@@ -10,38 +10,49 @@ import New from "../../pages/new/New"
 export const routes = [
     {
         path: '/',
-        element: <Dashboard/>
+        element: <Dashboard/>,
+        nested: [
+        ]
     },
     {
         path: '/users',
         element: <Users/>,
         nested: [
-            // {
-            //     path: ':userId',
-            //     element: <SingleUser/>
-            // },
             {
-                path: '/new',
+                path: ':userId',
+                element: <SingleUser/>
+            },
+            {
+                path: 'new',
                 element: <New/>
             }
         ]
     },
     {
+        path: '/users/:userId',
+        element: <SingleUser/>,        
+    },
+    {
+        path: '/users/new',
+        element: <New/>,        
+    },
+    {
         path: '/products',
-        element: <Products/>
+        element: <Products/>,
+        nested: [
+        ]
     },
     {
         path: '/orders',
-        element: <Orders/>
+        element: <Orders/>,
+        nested: [
+        ]
     },
     {
         path: '/delivery',
-        element: <Delivery/>
-    },
-    {
-        path: '/singleuser',
-        element: <SingleUser/>
+        element: <Delivery/>,
+        nested: [
+        ]
     }
-
 ]
 

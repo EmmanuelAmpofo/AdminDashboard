@@ -62,7 +62,7 @@ function Chart({aspect, title, className}) {
   const classes = useStyles();
   return (
     <div className={classes.chart}>
-      <ResponsiveContainer className={classes.res} width="100%" height={322} aspect={aspect}>
+      <ResponsiveContainer className={classes.res} width="100%" aspect={aspect}>
         <AreaChart
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

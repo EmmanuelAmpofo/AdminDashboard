@@ -11,12 +11,12 @@ import CardFooter from './CardFooter'
   },
  }))
 
-function MainCard({icon,percent, title, children, footerlink, footericon}) {
+function MainCard({icon,percent, title, children, footerlink, footericon, className}) {
 
   const classes = useStyles()
   return (
     <Card className={classes.mainCard}>
-        <CardHeader icon={icon} title={title} percent={percent} className={classes.userHead}/>
+        <CardHeader icon={icon} title={title} percent={percent} className={className}/>
         <CardContent children={children} title={title}/>
         <CardFooter footerlink={footerlink} footericon={footericon} title={title}/>
     </Card>

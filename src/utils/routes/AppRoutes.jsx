@@ -4,7 +4,7 @@ import Delivery from "../../pages/delivery/Delivery"
 import Users from "../../pages/users/Users"
 import Orders from "../../pages/orders/Orders"
 import SingleUser from "../../pages/singleperson/SingleUser"
-import New from "../../pages/new/New"
+import NewUser from "../../pages/new/NewUser"
 
 
 export const routes = [
@@ -24,7 +24,7 @@ export const routes = [
             },
             {
                 path: 'new',
-                element: <New/>
+                element: <NewUser/>
             }
         ]
     },
@@ -34,7 +34,7 @@ export const routes = [
     },
     {
         path: '/users/new',
-        element: <New/>,        
+        element: <NewUser/>,        
     },
     {
         path: '/products',

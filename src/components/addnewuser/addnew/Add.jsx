@@ -30,33 +30,33 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     cursor: "pointer",
     gap: 5,
-    width: "40%"
+    width: "40%",
   },
   imgSpan: {
     fontSize: "14px",
   },
   underline: {
     "&&&:before": {
-      transition: "none"
+      transition: "none",
     },
     "&&:after": {
-      borderBottom: "none"
-    }
+      borderBottom: "none",
+    },
   },
-  formTextField:{
-    width: "100%"
+  formTextField: {
+    width: "100%",
   },
-  form:{
+  form: {
     display: "flex",
     flexWrap: "wrap",
     gap: "30px",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
   },
   formInput: {
-    width: "40%"
+    width: "40%",
   },
   input: {
-    width: "100%"
+    width: "100%",
   },
   SendBtn: {
     width: "150px",
@@ -64,12 +64,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.global.teal,
     color: theme.palette.global.white,
     border: "none",
-    marginTop: "10px"
-  }
-  
+    marginTop: "10px",
+    "&:hover": {
+      color: theme.palette.global.teal,
+      border: "1px solid teal"
+    }
+  },
 }));
 
-function AddNew() {
+function Add({ inputs }) {
   const classes = useStyles();
   return (
     <Box className={classes.addNewContainer}>
@@ -88,28 +91,21 @@ function AddNew() {
               <span className={classes.imgSpan}>Upload Image</span>
             </label>
             <input type="file" id="file" className={classes.fileInput}></input>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Username"  className={classes.formTextField} InputProps={{classes}} fullWidth={true} />
-            </Box>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Full Name" InputProps={{classes}} fullWidth={true}/>
-            </Box>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Email" type="mail" InputProps={{classes}} fullWidth={true}/>
-            </Box>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Phone" type="number" InputProps={{classes}} fullWidth={true}/>
-            </Box>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Password" type="password" InputProps={{classes}} fullWidth={true}/>
-            </Box>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Address" InputProps={{classes}} fullWidth={true}/>
-            </Box>
-            <Box className={classes.formInput}>
-              <TextField placeholder="Country" type="country" InputProps={{classes}} fullWidth={true}/>
-            </Box>
-            <Button variant="outlined" className={classes.SendBtn} >Add User</Button>
+
+            {inputs.map((input) => (
+              <Box className={classes.formInput} key={input.id}>
+                <TextField
+                  placeholder={input.placeholder}
+                  type={input.type}
+                  className={classes.formTextField}
+                  InputProps={{ classes }}
+                  fullWidth={true}
+                />
+              </Box>
+            ))}
+            <Button variant="outlined" className={classes.SendBtn}>
+              Add User
+            </Button>
           </form>
         </Box>
       </Box>
@@ -117,4 +113,4 @@ function AddNew() {
   );
 }
 
-export default AddNew;
+export default Add;

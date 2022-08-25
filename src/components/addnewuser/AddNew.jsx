@@ -1,7 +1,7 @@
 import { Box } from "@material-ui/core";
 import React from "react";
 import MainCard from "../../utils/reusables/maincard/MainCard";
-import AddNew from "./addnew/AddNew";
+import Add from "./addnew/Add";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -10,16 +10,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AddNewUser() {
+function AddNew({title, inputs}) {
   const classes = useStyles();
   return (
     <div>
       <Box className={classes.add}>
-        <MainCard title="Add new user" />
+        <MainCard title={title} />
       </Box>
-      <MainCard children={<AddNew />} />
+      <MainCard children={<Add inputs={inputs}/>} />
     </div>
   );
 }
 
-export default AddNewUser;
+export default AddNew;

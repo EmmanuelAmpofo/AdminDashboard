@@ -10,7 +10,7 @@ const darkblue = "darkblue"
 const goldenrod = "goldenrod"
 const shadeGray = "#80808017"
 const grayLight = "#aeaeae"
-const dashboardBackground = "#e4f0fc5c"
+const dashboardBackground = "#f7f7f7"
 const approvedBackground = "rgba(0, 128, 0, 0.151)"
 const pendingBackground = "rgba(189, 189, 3, 0.103)"
 

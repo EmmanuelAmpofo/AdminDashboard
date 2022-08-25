@@ -1,13 +1,13 @@
 import { Box } from '@material-ui/core'
 import React from 'react'
-import AddNewUser from '../../components/addnewuser/AddNewUser'
+import AddNew from '../../components/addnewuser/AddNew'
 
-function NewUser() {
+function New({title, inputs}) {
   return (
     <Box>
-      <AddNewUser/>
+      <AddNew title={title} inputs={inputs}/>
     </Box>
   )
 }
 
-export default NewUser
+export default New

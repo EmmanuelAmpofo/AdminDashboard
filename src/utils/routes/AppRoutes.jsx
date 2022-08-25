@@ -4,7 +4,8 @@ import Delivery from "../../pages/delivery/Delivery"
 import Users from "../../pages/users/Users"
 import Orders from "../../pages/orders/Orders"
 import SingleUser from "../../pages/singleperson/SingleUser"
-import NewUser from "../../pages/new/NewUser"
+import New from "../../pages/new/NewUser"
+import { userInputs } from "../../components/addnewuser/addnew/formSource"
 
 
 export const routes = [
@@ -24,7 +25,7 @@ export const routes = [
             },
             {
                 path: 'new',
-                element: <NewUser/>
+                element: <New/>
             }
         ]
     },
@@ -34,7 +35,7 @@ export const routes = [
     },
     {
         path: '/users/new',
-        element: <NewUser/>,        
+        element: <New inputs={userInputs} title="Add new user" />,        
     },
     {
         path: '/products',

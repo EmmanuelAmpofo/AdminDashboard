@@ -4,7 +4,7 @@ import Delivery from "../../pages/delivery/Delivery"
 import Users from "../../pages/users/Users"
 import Orders from "../../pages/orders/Orders"
 import SingleUser from "../../pages/singleperson/SingleUser"
-import New from "../../pages/new/NewUser"
+import New from "../../pages/new/New"
 import { userInputs } from "../../components/addnewuser/addnew/formSource"
 
 

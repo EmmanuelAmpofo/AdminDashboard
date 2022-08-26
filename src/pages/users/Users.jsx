@@ -3,6 +3,8 @@ import { DataGrid } from "@material-ui/data-grid";
 import { makeStyles } from "@material-ui/core";
 import { UserRows, UserColumns } from "./usertable/UserTable";
 import "./usertable/usertable.css";
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
   dataGridWrapper: {
@@ -43,7 +45,9 @@ function Users() {
           <div className={classes.actionWrapper}>
             <div>
               {" "}
-              <span className={classes.viewBtn}>View</span>{" "}
+              <Link to="/users/singleuser" style={{ textDecoration: "none" }}>
+                <span className={classes.viewBtn}>View</span>{" "}
+              </Link>
             </div>
             <div>
               {" "}

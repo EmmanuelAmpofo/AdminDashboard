@@ -1,5 +1,5 @@
 import { Box, Button, TextField } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core";
 import { InsertPhoto } from "@material-ui/icons";
 
@@ -73,12 +73,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Add({ inputs }) {
+ 
+  const [file, setFile] = useState('')
+
+  const handleChange = (e) =>{
+    setFile(e.target.files[0])
+  }
+
   const classes = useStyles();
   return (
     <Box className={classes.addNewContainer}>
       <Box className={classes.imgWrapper}>
         <img
-          src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+          src= {file ? URL.createObjectURL(file) : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"}
           alt="emptyAvatar"
           className={classes.addNewImg}
         />
@@ -90,7 +97,7 @@ function Add({ inputs }) {
               <InsertPhoto />
               <span className={classes.imgSpan}>Upload Image</span>
             </label>
-            <input type="file" id="file" className={classes.fileInput}></input>
+            <input type="file" id="file" className={classes.fileInput} onChange={handleChange}></input>
 
             {inputs.map((input) => (
               <Box className={classes.formInput} key={input.id}>

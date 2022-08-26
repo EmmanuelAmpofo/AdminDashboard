@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core";
 import { UserRows, UserColumns } from "./usertable/UserTable";
 import "./usertable/usertable.css";
 import { Link } from "react-router-dom";
-import SingleUser from "../singleperson/SingleUser";
+
 
 const useStyles = makeStyles((theme) => ({
   dataGridWrapper: {

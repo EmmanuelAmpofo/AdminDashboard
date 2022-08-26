@@ -13,7 +13,7 @@ import { mainMenuData } from "./MenuData";
 import logo from "../../assets/color.svg"
 import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 const sideBarWidth = "15.625rem";
 const useStyles = makeStyles((theme) => ({
@@ -91,7 +91,9 @@ function SideBar() {
         classes={{ paper: classes.paper }}
       >
         <div className={classes.logo}>
+          <Link to="/">
             <img src={logo} alt="company"/>
+          </Link>
         </div>
         <hr/>
         <List>

@@ -201,7 +201,7 @@ export const UserColumns = [
   {
     field: "status",
     headerName: "Status",
-    width: 150,
+    width: 140,
     renderCell: (params) => {
       return (
         <div >

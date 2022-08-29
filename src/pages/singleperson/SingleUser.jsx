@@ -25,7 +25,7 @@ function SingleUser({ className }) {
         <Grid item xs={8}>
           <Graph
             title="User Spending (Last 6 Months)"
-            aspect={4.1 / 1}
+            aspect={4}
             className={`${classes.userSpending} ${className}`}
           />
         </Grid>

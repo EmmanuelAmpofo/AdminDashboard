@@ -2,24 +2,26 @@ import React from "react";
 import {
   Box,
   Drawer,
+  Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Switch,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { mainMenuData } from "./MenuData";
-import logo from "../../assets/color.svg"
+import logo from "../../assets/color.svg";
 import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 
 const sideBarWidth = "15.625rem";
 const useStyles = makeStyles((theme) => ({
-    sidebarRoot: {
-        display: 'flex'
-    },
+  sidebarRoot: {
+    display: "flex",
+  },
   drawer: {
     width: sideBarWidth,
   },
@@ -35,11 +37,10 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   listItem: {
-    cursor: 'pointer',
-    // background: "gray",
+    cursor: "pointer",
     "&:hover": {
-        background: theme.palette.global.shadeGray,
-    }
+      background: theme.palette.global.shadeGray,
+    },
   },
   menuIcon: {
     minWidth: "35px",
@@ -47,7 +48,10 @@ const useStyles = makeStyles((theme) => ({
   toggleWrapper: {
     position: "absolute",
     bottom: 20,
-    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "98%",
   },
   toggleBtn: {
     display: "flex",
@@ -79,8 +83,8 @@ const useStyles = makeStyles((theme) => ({
 
 function SideBar() {
   const classes = useStyles();
-//   const location = useLocation()
-  const navigate = useNavigate()
+  //   const location = useLocation()
+  const navigate = useNavigate();
 
   return (
     <div className={classes.sidebarRoot}>
@@ -92,15 +96,19 @@ function SideBar() {
       >
         <div className={classes.logo}>
           <Link to="/">
-            <img src={logo} alt="company"/>
+            <img src={logo} alt="company" />
           </Link>
         </div>
-        <hr/>
+        <hr />
         <List>
           {mainMenuData.map((menuItem) => (
-            <ListItem key={menuItem.text} className={classes.listItem} onClick={()=>{
-                navigate(menuItem.path)
-            }} >
+            <ListItem
+              key={menuItem.text}
+              className={classes.listItem}
+              onClick={() => {
+                navigate(menuItem.path);
+              }}
+            >
               <ListItemIcon className={classes.menuIcon}>
                 <Typography>{menuItem.icon}</Typography>
               </ListItemIcon>
@@ -110,17 +118,28 @@ function SideBar() {
             </ListItem>
           ))}
         </List>
-        <Box className={classes.toggleWrapper}>
+        {/* <Box className={classes.toggleWrapper}>
           <hr />
           <Box className={classes.toggleBtn}>
             <Box className={classes.light}>
-              <IoSunny />
+              
               <Typography>Light</Typography>
             </Box>
             <Box className={classes.dark}>
-              <RiMoonFill />
+              
               <Typography>Dark</Typography>
             </Box>
+          </Box>
+        </Box> */}
+        <Box className={classes.toggleWrapper}>
+          <Box>
+            <Grid component="label" container alignItems="center" spacing={1}>
+              <Grid item><IoSunny /></Grid>
+              <Grid item>
+                <Switch width="100%" />
+              </Grid>
+              <Grid item><RiMoonFill /></Grid>
+            </Grid>
           </Box>
         </Box>
       </Drawer>

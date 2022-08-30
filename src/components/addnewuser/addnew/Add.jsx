@@ -38,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   underline: {
     "&&&:before": {
       transition: "none",
+      border: "none",
+      borderBottom: `1.5px solid gray`
     },
     "&&:after": {
       borderBottom: "none",
@@ -45,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
   formTextField: {
     width: "100%",
+    
   },
   form: {
     display: "flex",

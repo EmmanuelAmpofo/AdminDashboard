@@ -16,6 +16,7 @@ const pendingBackground = "rgba(189, 189, 3, 0.103)"
 
 export default createTheme({
     palette: {
+        // type: 'dark',
         global: {
             white: `${white}`,
             black: `${black}`,
@@ -26,7 +27,7 @@ export default createTheme({
             darkblue: `${darkblue}`,
             goldenrod: `${goldenrod}`,
             shadeGray: `${shadeGray}`,
-            dashboardBackground: `${dashboardBackground}`,
+            // dashboardBackground: `${dashboardBackground}`,
             grayLight: `${grayLight}`,
             approvedBackground: `${approvedBackground}`,
             pendingBackground: `${pendingBackground}`

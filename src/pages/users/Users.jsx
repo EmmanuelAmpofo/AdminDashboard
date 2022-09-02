@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
   },
   data: {
-    background: "#fff",
+    background: theme.palette.global.white,
   },
   addnewuser: {
     marginBottom: "20px",

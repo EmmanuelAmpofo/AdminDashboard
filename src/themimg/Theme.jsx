@@ -14,7 +14,7 @@ const dashboardBackground = "#f7f7f7"
 const approvedBackground = "rgba(0, 128, 0, 0.151)"
 const pendingBackground = "rgba(189, 189, 3, 0.103)"
 
-export default createTheme({
+export const lightTheme =  createTheme({
     palette: {
         // type: 'dark',
         global: {
@@ -39,5 +39,12 @@ export default createTheme({
         // fontSize: 14,
         fontWeight: 400,
         color: `${black}`
+    }
+})
+
+// const topbarBackground = "#424242"
+export const darkTheme = createTheme({
+    palette: {
+        type: "dark",
     }
 })

@@ -1,13 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core";
-import Theme from "./themimg/Theme";
 import MainLayout from "./mainLayout/MainLayout";
 import { routes } from "./utils/routes/AppRoutes";
+import { lightTheme, darkTheme } from "./themimg/Theme";
+import { useState } from "react";
 
 function App() {
+
+  const [dark, setDark] = useState(false)
+
   return (
     <div className="darkMode">
-      <ThemeProvider theme={Theme}>
+      <ThemeProvider theme={dark ? darkTheme : lightTheme}>
         <Router>
           <MainLayout>
             <Routes>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Drawer,
@@ -16,6 +16,7 @@ import logo from "../../assets/color.svg";
 import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import { lightTheme, darkTheme } from "../../themimg/Theme";
 
 const sideBarWidth = "15.625rem";
 const useStyles = makeStyles((theme) => ({
@@ -81,10 +82,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SideBar() {
+function SideBar(theme) {
   const classes = useStyles();
   //   const location = useLocation()
   const navigate = useNavigate();
+
+  const [dark, setDark] = useState(false)
+
+  const handleDark = () => {
+    setDark(!dark)
+    console.log(!dark)
+  }
 
   return (
     <div className={classes.sidebarRoot}>
@@ -136,7 +144,7 @@ function SideBar() {
             <Grid component="label" container alignItems="center" spacing={1}>
               <Grid item><IoSunny /></Grid>
               <Grid item>
-                <Switch width="100%" />
+                <Switch width="100%" checked={dark} onChange={handleDark}/>
               </Grid>
               <Grid item><RiMoonFill /></Grid>
             </Grid>

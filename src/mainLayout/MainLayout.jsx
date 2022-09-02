@@ -26,7 +26,7 @@ function MainLayout({children}) {
     const classes = useStyles()
   return (
     <Paper className={classes.mainLayout}>
-        <SideBar/>
+        <SideBar theme/>
         <TopBar/>
         <div className={classes.childWrap}>
           <div className={classes.toolbarHeight}></div>

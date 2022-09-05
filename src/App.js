@@ -1,30 +1,31 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "@material-ui/core";
+import { Paper, ThemeProvider } from "@material-ui/core";
 import MainLayout from "./mainLayout/MainLayout";
 import { routes } from "./utils/routes/AppRoutes";
 import { lightTheme, darkTheme } from "./themimg/Theme";
 import { useState } from "react";
 
+
+
 function App() {
-
-  const [dark, setDark] = useState(false)
-
+  const [themeSelector, setThemeSelector] = useState(false);
+  
   return (
-    <div className="darkMode">
-      <ThemeProvider theme={dark ? darkTheme : lightTheme}>
+    <Paper className="darkMode">
+      <ThemeProvider theme={themeSelector ? darkTheme : lightTheme}>
         <Router>
-          <MainLayout>
+          <MainLayout setTheme={setThemeSelector}>
             <Routes>
               <Route exact path={"/"}>
-                {routes.map(({ path, element, nested }, key) => (
-                  <Route exact path={path} element={element} key={key}></Route>
+                {routes.map(({ path, element }, key) => (
+                  <Route exact path={path} element={element} key={key} ></Route>
                 ))}
               </Route>
             </Routes>
           </MainLayout>
         </Router>
       </ThemeProvider>
-    </div>
+    </Paper>
   );
 }
 

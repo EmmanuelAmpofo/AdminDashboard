@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import Users from "../../components/boardWidgets/Users"
 import Orders from "../../components/boardWidgets/Orders"
 import Balance from "../../components/boardWidgets/Balance"
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   middlesection: {
     marginBottom: "1rem"
-  }
+  },
 }));
 
 function Dasboard() {

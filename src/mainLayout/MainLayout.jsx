@@ -9,29 +9,31 @@ const sideBarWidth = 250
 const useStyles = makeStyles((theme)=>({
   mainLayout:{
     display: 'flex',
-    height: "100vh"
+    height: "100vh",
+
   },
   childWrap: {
     width: `calc(100% - ${sideBarWidth}px)`,
     background: theme.palette.global.dashboardBackground,
     padding: "1.875rem",
-    height: "100%"
+    height: "100vh",
+
   },
     toolbarHeight: {
       ...theme.mixins.toolbar
     }
 }));
 
-function MainLayout({children}) {
+function MainLayout({children, check, change,setTheme}) {
     const classes = useStyles()
   return (
     <Paper className={classes.mainLayout}>
-        <SideBar theme/>
+        <SideBar setTheme = {setTheme}/>
         <TopBar/>
-        <div className={classes.childWrap}>
+        <Paper className={classes.childWrap}>
           <div className={classes.toolbarHeight}></div>
             {children}
-        </div>
+        </Paper>
     </Paper>
   )
 }

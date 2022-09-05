@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DataGrid } from "@material-ui/data-grid";
-import { Box, Button, makeStyles } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import { UserRows, UserColumns } from "./usertable/UserTable";
 import "./usertable/usertable.css";
 import { Link } from "react-router-dom";
@@ -31,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
     border: "1px dotted rgba(220,20,60,0.6)",
     cursor: "pointer",
   },
-  data: {
-    background: theme.palette.global.white,
-  },
+  // data: {
+  //   background: theme.palette.global.black,
+  // },
   addnewuser: {
     marginBottom: "20px",
   },

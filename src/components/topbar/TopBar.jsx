@@ -1,4 +1,4 @@
-import { AppBar, Badge, Box, Toolbar} from "@material-ui/core";
+import { AppBar, Badge, Box, Paper, Toolbar} from "@material-ui/core";
 import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { SearchRounded, NotificationsNoneRounded } from "@material-ui/icons";
@@ -26,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
   searchinput: {
     border: "none",
     outline: "none",
+    background: "transparent",
+    color: theme.palette.global.black
   },
   searchicon: {
     cursor: "pointer",
@@ -51,7 +53,7 @@ function TopBar() {
   const classes = useStyles();
 
   return (
-    <Box className={classes.topBarWrapper}>
+    <Paper className={classes.topBarWrapper}>
       <AppBar className={classes.appBar} elevation={0}>
         <Toolbar className={classes.toolbar}>
           <Box className={classes.search}>
@@ -66,7 +68,7 @@ function TopBar() {
           </Box>
         </Toolbar>
       </AppBar>
-    </Box>
+    </Paper>
   );
 }
 

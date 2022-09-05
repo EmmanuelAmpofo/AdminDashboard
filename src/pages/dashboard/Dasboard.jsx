@@ -14,13 +14,17 @@ const useStyles = makeStyles((theme) => ({
   },
   middlesection: {
     marginBottom: "1rem"
+  },
+  toplayout:{
+    border: "1px solid green",
+    
   }
 }));
 
 function Dasboard() {
   const classes = useStyles();
   return (
-    <div className={classes.toplayout}>
+    <Paper className={classes.toplayout}>
       <Grid container spacing={2} className={classes.uppersection}>
         <Grid item xs={3}>
           <Users />
@@ -48,7 +52,7 @@ function Dasboard() {
           <DashboardTable title="Customers"/>
         </Grid>
       </Grid>
-    </div>
+    </Paper>
   );
 }
 

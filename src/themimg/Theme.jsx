@@ -12,9 +12,9 @@ const darkblue = "darkblue"
 const goldenrod = "goldenrod"
 const shadeGray = "#80808017"
 const grayLight = "#aeaeae"
-// const dashboardBackground = "#f7f7f7"
 const approvedBackground = "rgba(0, 128, 0, 0.151)"
 const pendingBackground = "rgba(189, 189, 3, 0.103)"
+const topbarBackground = "#424242"
 
 export const lightTheme =  createTheme({
     palette: {
@@ -44,7 +44,7 @@ export const lightTheme =  createTheme({
     }
 })
 
-const topbarBackground = "#424242"
+
 export const darkTheme = createTheme({
     palette: {
         type: "dark",

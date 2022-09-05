@@ -9,14 +9,14 @@ const sideBarWidth = 250
 const useStyles = makeStyles((theme)=>({
   mainLayout:{
     display: 'flex',
-    height: "100vh",
+    // height: "100vh",
 
   },
   childWrap: {
     width: `calc(100% - ${sideBarWidth}px)`,
     background: theme.palette.global.dashboardBackground,
     padding: "1.875rem",
-    height: "100vh",
+    // height: "100vh",
 
   },
     toolbarHeight: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme)=>({
     }
 }));
 
-function MainLayout({children, check, change,setTheme}) {
+function MainLayout({children, setTheme}) {
     const classes = useStyles()
   return (
     <Paper className={classes.mainLayout}>

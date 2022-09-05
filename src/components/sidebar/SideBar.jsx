@@ -15,7 +15,7 @@ import { mainMenuData } from "./MenuData";
 import logo from "../../assets/color.svg";
 import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import {  useNavigate, Link } from "react-router-dom";
 
 
 const sideBarWidth = "15.625rem";
@@ -128,19 +128,6 @@ function SideBar({setTheme}) {
             </ListItem>
           ))}
         </List>
-        {/* <Box className={classes.toggleWrapper}>
-          <hr />
-          <Box className={classes.toggleBtn}>
-            <Box className={classes.light}>
-              
-              <Typography>Light</Typography>
-            </Box>
-            <Box className={classes.dark}>
-              
-              <Typography>Dark</Typography>
-            </Box>
-          </Box>
-        </Box> */}
         <Box className={classes.toggleWrapper}>
           <Box>
             <Grid component="label" container alignItems="center" spacing={1}>

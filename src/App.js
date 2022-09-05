@@ -4,7 +4,7 @@ import MainLayout from "./mainLayout/MainLayout";
 import { routes } from "./utils/routes/AppRoutes";
 import { lightTheme, darkTheme } from "./themimg/Theme";
 import { useState } from "react";
-import { useEffect } from "react";
+
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <MainLayout setTheme={setThemeSelector}>
             <Routes>
               <Route exact path={"/"}>
-                {routes.map(({ path, element, nested }, key) => (
+                {routes.map(({ path, element }, key) => (
                   <Route exact path={path} element={element} key={key} ></Route>
                 ))}
               </Route>

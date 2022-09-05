@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import Users from "../../components/boardWidgets/Users"
 import Orders from "../../components/boardWidgets/Orders"
 import Balance from "../../components/boardWidgets/Balance"
@@ -15,16 +15,12 @@ const useStyles = makeStyles((theme) => ({
   middlesection: {
     marginBottom: "1rem"
   },
-  toplayout:{
-    border: "1px solid green",
-    
-  }
 }));
 
 function Dasboard() {
   const classes = useStyles();
   return (
-    <Paper className={classes.toplayout}>
+    <div className={classes.toplayout}>
       <Grid container spacing={2} className={classes.uppersection}>
         <Grid item xs={3}>
           <Users />
@@ -52,7 +48,7 @@ function Dasboard() {
           <DashboardTable title="Customers"/>
         </Grid>
       </Grid>
-    </Paper>
+    </div>
   );
 }
 

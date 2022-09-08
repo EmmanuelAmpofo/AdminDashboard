@@ -3,18 +3,28 @@ import { Paper, ThemeProvider } from "@material-ui/core";
 import MainLayout from "./mainLayout/MainLayout";
 import { routes } from "./utils/routes/AppRoutes";
 import { lightTheme, darkTheme } from "./themimg/Theme";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { DarkModeContext } from "./utils/context/darkModeContext";
 
 
 
 function App() {
-  const [themeSelector, setThemeSelector] = useState(false);
+  // const [themeSelector, setThemeSelector] = useState(false);
+  const {darkMode} = useContext(DarkModeContext);
+  const [isDarkMode, setIsDarkMode] = useState(darkMode);
+
+  useEffect(()=>{
+    setIsDarkMode(darkMode)
+    console.log(darkMode)
+  },[darkMode])
   
   return (
-    <Paper className="darkMode">
-      <ThemeProvider theme={themeSelector ? darkTheme : lightTheme}>
+    <Paper
+    >
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
         <Router>
-          <MainLayout setTheme={setThemeSelector}>
+          {/* <MainLayout setTheme={setThemeSelector}> */}
+          <MainLayout>
             <Routes>
               <Route exact path={"/"}>
                 {routes.map(({ path, element }, key) => (

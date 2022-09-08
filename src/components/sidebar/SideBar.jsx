@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Drawer,
@@ -7,15 +7,17 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  Switch,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import { mainMenuData } from "./MenuData";
-import logo from "../../assets/color.svg";
+import logo from "../../assets/ventrinaLogo.svg";
 import { IoSunny } from "react-icons/io5";
 import { RiMoonFill } from "react-icons/ri";
-import {  useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { DarkModeContext } from "../../utils/context/darkModeContext";
+
+import "../../utils/reusables/btns/ToggleSwitch.css";
 
 
 const sideBarWidth = "15.625rem";
@@ -82,19 +84,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function SideBar({setTheme}) {
+function SideBar() {
   const classes = useStyles();
-  //   const location = useLocation()
   const navigate = useNavigate();
 
-  const [darkMode, setDarkMode] = useState(false)
+  // const [darkMode, setDarkMode] = useState(false)
 
-  const handleDarkMode = () => {
-    setDarkMode(!darkMode)
-    // window.location.reload()
-    setTheme((prev)=>!prev)
-    console.log(!darkMode)
-  }
+  const { dispatch } = useContext(DarkModeContext);
+
+  // const handleDarkMode = () => {
+  //   setDarkMode(!darkMode)
+  //   // window.location.reload()
+  //   setTheme((prev)=>!prev)
+  //   console.log(!darkMode)
+  // }
 
   return (
     <div className={classes.sidebarRoot}>
@@ -131,11 +134,20 @@ function SideBar({setTheme}) {
         <Box className={classes.toggleWrapper}>
           <Box>
             <Grid component="label" container alignItems="center" spacing={1}>
-              <Grid item><IoSunny /></Grid>
               <Grid item>
-                <Switch width="100%" checked={darkMode} onChange={handleDarkMode}/>
+                <IoSunny />
               </Grid>
-              <Grid item><RiMoonFill /></Grid>
+              <Grid item>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" onChange={()=> dispatch({type: "TOGGLE"})}/>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </Grid>
+              <Grid item>
+                <RiMoonFill />
+              </Grid>
             </Grid>
           </Box>
         </Box>

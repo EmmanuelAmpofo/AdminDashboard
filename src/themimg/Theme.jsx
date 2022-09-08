@@ -1,7 +1,5 @@
 import { createTheme } from "@material-ui/core";
 
-
-
 const white = '#ffffff'
 const blue = "#85A2B7"
 const black= "#303030"
@@ -29,7 +27,6 @@ export const lightTheme =  createTheme({
             darkblue: `${darkblue}`,
             goldenrod: `${goldenrod}`,
             shadeGray: `${shadeGray}`,
-            // dashboardBackground: `${dashboardBackground}`,
             grayLight: `${grayLight}`,
             approvedBackground: `${approvedBackground}`,
             pendingBackground: `${pendingBackground}`
@@ -38,7 +35,6 @@ export const lightTheme =  createTheme({
     },
     typography: {
         fontFamily: "Nunito, sans-serif",
-        // fontSize: 14,
         fontWeight: 400,
         color: `${black}`
     }
@@ -58,7 +54,6 @@ export const darkTheme = createTheme({
             darkblue: `${darkblue}`,
             goldenrod: `${goldenrod}`,
             shadeGray: `${shadeGray}`,
-            // dashboardBackground: `${dashboardBackground}`,
             grayLight: `${grayLight}`,
             approvedBackground: `${approvedBackground}`,
             pendingBackground: `${pendingBackground}`
@@ -67,7 +62,6 @@ export const darkTheme = createTheme({
     },
     typography: {
         fontFamily: "Nunito, sans-serif",
-        // fontSize: 14,
         fontWeight: 400,
         color: `${white}`
     }
